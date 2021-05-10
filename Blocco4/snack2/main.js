@@ -11,17 +11,16 @@ var triangolo = {
         return area2 / 2;
     },
     ipotenusa : function() {
-        return Math.sqrt(triangolo.base ** 2 + triangolo.altezza ** 2);
+        var ipo = Math.sqrt(Math.pow(this.base, 2) + Math.pow(this.altezza, 2));
+        return ipo;
     },
-    perimetro :function(){
-      return triangolo.base + triangolo.altezza + triangolo.ipotenusa;
+    perimetro :function() {
+      return this.base + this.altezza + this.ipotenusa()
     },
    
 }
 console.log(triangolo.area());
-//var area = (triangolo.base * triangolo.altezza) / 2 ;
 
-//var ipotenusa = Math.sqrt(triangolo.base ** 2 + triangolo.altezza ** 2);
 console.log(triangolo.ipotenusa());
-//var perimetro = triangolo.base + triangolo.altezza + ipotenusa ;
+
 console.log(triangolo.perimetro());
